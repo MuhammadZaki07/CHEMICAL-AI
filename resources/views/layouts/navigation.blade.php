@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 shadow-sm">
+<nav x-data="{ open: false }" class="bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 shadow-sm sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16 relative">
             <!-- Left: Logo & Menu -->
