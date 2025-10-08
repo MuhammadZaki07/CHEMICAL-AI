@@ -1,13 +1,13 @@
-<div class="min-h-screen bg-slate-100 py-8">
+<div class="min-h-screen bg-black py-8 rounded-xl">
   <div class="mx-auto max-w-4xl space-y-6">
 
     {{-- STEPPER (2 step) --}}
-    <div id="stepper" class="bg-white rounded-2xl p-4 shadow flex items-center gap-4">
+    <div id="stepper" class="bg-gray-950 rounded-2xl p-4 shadow flex items-center gap-4 text-slate-500">
       <div class="flex items-center gap-3 w-full">
         <div data-step="1" class="flex items-center gap-3">
           <div class="step-circle w-9 h-9 rounded-full flex items-center justify-center bg-blue-600 text-white font-semibold">1</div>
           <div class="hidden sm:block">
-            <div class="text-xs text-slate-500">Langkah 1</div>
+            <div class="text-xs">Langkah 1</div>
             <div class="font-medium">Upload Video</div>
           </div>
         </div>
@@ -26,13 +26,13 @@
     </div>
 
     {{-- STEP 1: UPLOAD --}}
-    <div id="step1" class="rounded-2xl bg-blue-900 text-white shadow-md p-4">
+    <div id="step1" class="rounded-2xl bg-blue-950 text-white shadow-md p-4">
       <div class="px-1">
         <h3 class="text-lg font-semibold">Langkah 1: Upload Video Reaksi</h3>
         <p class="text-sm text-white/80 mt-1">Upload video atau rekam langsung. Minimal durasi potong: 5 detik.</p>
       </div>
 
-      <div id="dropZone" class="mt-4 rounded-xl border-2 border-dashed border-white/30 bg-blue-800/70 p-4 text-center cursor-pointer transition">
+      <div id="dropZone" class="mt-4 rounded-xl border-2 border-dashed border-white/30 bg-blue-950/70 p-4 text-center cursor-pointer transition">
 
         <!-- wrapper video + canvas -->
         <div class="relative w-full max-w-2xl mx-auto">

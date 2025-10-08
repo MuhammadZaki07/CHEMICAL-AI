@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="max-w-5xl mx-auto py-8 px-4">
-        <h2 class="text-2xl font-bold mb-6">Riwayat Analisis Anda</h2>
+    <div class="max-w-5xl mx-auto lg:py-32 py-8 px-4">
+        <h2 class="text-2xl font-bold mb-6 text-slate-200">Riwayat Analisis Anda</h2>
 
         @if($analyses->isEmpty())
             <div class="text-gray-500">Belum ada analisis yang pernah dilakukan.</div>

@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-sm">
+<nav x-data="{ open: false }" class="bg-white dark:bg-black border-b border-gray-200 dark:border-gray-700 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16 relative">
             <!-- Left: Logo & Menu -->
@@ -6,7 +6,7 @@
                 <a href="{{ route('page.dashboard') }}">
                     <x-application-logo class="block h-9 w-auto fill-current text-blue-600 dark:text-blue-400" />
                 </a>
-                <h1 class="text-xl font-semibold text-zinc-900 px-3">ChemicalAI</h1>
+                <h1 class="text-xl font-semibold text-white px-3">ChemicalAI</h1>
             </div>
 
             <!-- Desktop Nav -->
@@ -14,7 +14,7 @@
                 <x-nav-link :href="route('page.dashboard')" :active="request()->routeIs('page.dashboard')">
                     {{ __('Dashboard') }}
                 </x-nav-link>
-                @auth 
+                @auth
                     <x-nav-link :href="route('page.analisis')" :active="request()->routeIs('page.analisis')">
                         {{ __('Analisis') }}
                     </x-nav-link>
@@ -55,9 +55,9 @@
                             <button class="flex items-center space-x-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none">
                                 <span>{{ Auth::user()->name }}</span>
                                 <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 
-                                        10.586l3.293-3.293a1 1 0 111.414 
-                                        1.414l-4 4a1 1 0 01-1.414 
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10
+                                        10.586l3.293-3.293a1 1 0 111.414
+                                        1.414l-4 4a1 1 0 01-1.414
                                         0l-4-4a1 1 0 010-1.414z"
                                         clip-rule="evenodd" />
                                 </svg>
@@ -115,7 +115,7 @@
                 <x-responsive-nav-link :href="route('page.review')" :active="request()->routeIs('page.review')">
                     {{ __('Review') }}
                 </x-responsive-nav-link>
-                
+
             @endauth
             <x-responsive-nav-link :href="route('page.fitur')" :active="request()->routeIs('page.fitur')">
                 {{ __('Fitur') }}

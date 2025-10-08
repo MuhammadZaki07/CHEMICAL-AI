@@ -10,6 +10,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="https://cdn.tailwindcss.com"></script>
+         <link rel="shortcut icon" href="/images/chemicalAi.png" type="image/x-icon">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -35,9 +36,9 @@
             <main>
                 {{ $slot }}
             </main>
-            
+
             @include('layouts.footer')
-        
+
         </div>
     </body>
 </html>

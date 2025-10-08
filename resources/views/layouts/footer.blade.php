@@ -1,11 +1,10 @@
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-500 py-10 px-8 ">
+<footer class="bg-gray-950 text-gray-500 py-10 px-8 border-t border-white/[.2]">
     <div class="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-7 gap-8 text-sm items-start">
         <!-- Logo dan Deskripsi -->
         <div class="col-span-2">
             <div class="flex items-center gap-2 mb-2">
-                <img src="/images/home/logo.svg" alt="SaniFlow Logo" class="w-20 h-20">
-                <h1 class="text-xl font-semibold text-[#02A6EB]">Chemical AI</h1>
+                <img src="/images/chemicalAi.png" alt="SaniFlow Logo" class="w-20 h-20">
+                <h1 class="text-xl font-semibold text-[#ffffff]">Chemical AI</h1>
             </div>
             <p>Platform analisis kimia berbasis AI yang mengubah video reaksi menjadi data kuantitatif akurat. Laboratorium kimia di dalam browser Anda.</p>
         </div>
@@ -56,18 +55,27 @@
             </div>
 
             <!-- Sosial -->
-            <div>
-                <h3 class="font-bold mb-2">Follow Us</h3>
-                <div class="flex gap-3 mb-4">
-                    <img src="/images/home/Facebook.png" alt="Facebook" class="w-6 h-6">
-                    <img src="/images/home/Telegram.png" alt="Telegram" class="w-6 h-6">
-                    <img src="/images/home/Instagram.png" alt="Instagram" class="w-6 h-6">
-                    <img src="/images/home/X.png" alt="X" class="w-6 h-6">
-                </div>
-            </div>
+           <div>
+  <h3 class="font-bold mb-2">Follow Us</h3>
+  <div class="flex gap-4 text-xl">
+    <a href="#" class="hover:opacity-80 transition">
+      <i class="bi bi-facebook"></i>
+    </a>
+    <a href="#" class="hover:opacity-80 transition">
+      <i class="bi bi-telegram"></i>
+    </a>
+    <a href="#" class="hover:opacity-80 transition">
+      <i class="bi bi-instagram"></i>
+    </a>
+    <a href="#" class="hover:opacity-80 transition">
+      <i class="bi bi-twitter-x"></i>
+    </a>
+  </div>
+</div>
+
         </div>
     </div>
-    
+
     <div class="flex justify-between items-center relative max-w-[1920px] mx-auto mt-10 pt-6 border-t border-gray-300">
         <div>
             <p class="text-xm text-gray-500">© 2025 All Rights Reserved</p>
