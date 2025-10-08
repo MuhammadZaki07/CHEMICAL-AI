@@ -7,11 +7,10 @@
     <title>403 | Forbidden</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
 </head>
-
 <body
     class="min-h-screen flex items-center justify-center bg-gradient-to-b from-black via-slate-900 to-blue-900 text-gray-100">
     <div class="text-center px-6">
-        <h1 class="text-8xl font-extrabold text-blue-500 mb-6">403</h1>
+        <h1 class="text-8xl font-extrabold text-white mb-6">403</h1>
         <h2 class="text-3xl font-bold mb-2">Akses Dilarang</h2>
         <p class="text-gray-400 mb-8">Kamu tidak memiliki izin untuk mengakses halaman ini.</p>
         <a href="{{ url('/') }}"
@@ -20,5 +19,4 @@
         </a>
     </div>
 </body>
-
 </html>
