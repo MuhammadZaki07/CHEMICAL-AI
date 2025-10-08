@@ -3,7 +3,7 @@
         class="flex flex-col items-center justify-center pt-28 lg:pb-5 px-4 sm:px-6 md:px-10 bg-gradient-to-b from-black to-gray-900 text-gray-100">
         <h1
             class="text-center text-3xl sm:text-5xl lg:text-7xl font-bold text-white max-w-5xl lg:py-0 sm:py-10 leading-tight">
-            <span>Ubah Video Reaksi Kimia Menjadi Data</span>
+            <span>Ubah Video Reaksi Kimia Menjadi Data Kuantitatif</span>
         </h1>
         <p
             class="text-center text-base sm:text-lg md:text-xl font-light text-white max-w-4xl mt-2 sm:mt-4 py-4 sm:py-8">
