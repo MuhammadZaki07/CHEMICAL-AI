@@ -289,7 +289,7 @@
                     mereka bisa melihat langsung bagaimana data dihasilkan dari eksperimen yang mereka lakukan."
                 </p>
                 <div class="flex items-center gap-3">
-                    <img src="{{ asset('images/anugrah.jpg') }}" class="w-10 h-10 rounded-full object-cover"
+                    <img src="{{ asset('images/user-unkown.png') }}" class="w-10 h-10 rounded-full object-cover"
                         alt="Dr. Anugrah">
                     <p class="font-semibold text-gray-100 text-sm">Dr. Anugrah R.W.</p>
                 </div>
@@ -305,7 +305,7 @@
                     analisis awal tanpa harus antre menggunakan spektrofotometer. Sangat efisien!"
                 </p>
                 <div class="flex items-center gap-3">
-                    <img src="{{ asset('images/mohammad.jpg') }}" class="w-10 h-10 rounded-full object-cover"
+                    <img src="{{ asset('images/user-unkown.png') }}" class="w-10 h-10 rounded-full object-cover"
                         alt="Mohammad">
                     <p class="font-semibold text-gray-100 text-sm">Mohammad I.U.</p>
                 </div>
@@ -321,7 +321,7 @@
                     Dosen saya sampai tanya dari mana saya dapat data seakurat ini!"
                 </p>
                 <div class="flex items-center gap-3">
-                    <img src="{{ asset('images/sarah.jpg') }}" class="w-10 h-10 rounded-full object-cover"
+                    <img src="{{ asset('images/user-unkown.png') }}" class="w-10 h-10 rounded-full object-cover"
                         alt="Sarah">
                     <p class="font-semibold text-gray-100 text-sm">Sarah L.</p>
                 </div>
