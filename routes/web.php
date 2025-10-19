@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', function () {return view('page.dashboard');})->name('page.dashboard');
-Route::get('/dashboard', function () {return view('page.dashboard');})->name('page.dashboard');
+// Route::get('/dashboard', function () {return view('page.dashboard');})->name('page.dashboard');
 Route::get('/fitur', [FiturController::class, 'index'])->name('page.fitur');
 Route::get('/harga', [HargaController::class, 'index'])->name('page.harga');
 Route::get('/cara_kerja', [CaraKerjaController::class, 'index'])->name('page.cara_kerja');
