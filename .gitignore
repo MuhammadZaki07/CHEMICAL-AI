@@ -1,37 +1,33 @@
-# Laravel environment & sensitive files
-.env
-.env.backup
-.env.production
-/storage/*.key
-
-# Composer / PHP dependencies
 /vendor
-/composer.lock
-/composer.phar
-
-# Node / build
 /node_modules
-/public/build
 /public/hot
-/npm-debug.log
-/yarn-error.log
-/package-lock.json
-/yarn.lock
-
-# IDE & local config
-/.idea
-/.vscode
-/.fleet
-/.phpunit.cache
-/.phpunit.result.cache
-Homestead.json
+/public/storage
+/storage/*.key
+.env
+.phpunit.result.cache
 Homestead.yaml
-auth.json
+Homestead.json
+.env.backup
 
-# Ignore public/index.php and .htaccess only in dev branch
-/public/index.php
-/public/.htaccess
+# Laravel IDE helper
+/_ide_helper.php
+/_ide_helper_models.php
 
-# OS generated files
+# Laravel Mix / Vite
+/public/build
+
+# OS atau editor files
 .DS_Store
 Thumbs.db
+*.log
+*.swp
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# NPM / Yarn logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
