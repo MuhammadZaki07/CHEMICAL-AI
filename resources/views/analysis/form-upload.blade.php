@@ -67,15 +67,15 @@
           <span id="durTime" class="text-xs tabular-nums">00:00</span>
         </div>
         <div class="mt-2 flex justify-center gap-3">
-          <button type="button" id="back5" class="rounded-full bg-blue-700 px-3 py-2 hover:bg-blue-600">⏪ 5s</button>
-          <button type="button" id="playPause" class="rounded-full bg-amber-500 text-blue-900 px-4 py-2 font-semibold hover:bg-amber-400">▶</button>
-          <button type="button" id="fwd5" class="rounded-full bg-blue-700 px-3 py-2 hover:bg-blue-600">5s ⏩</button>
+          <button type="button" id="back5" class="rounded-full bg-blue-700 px-3 py-2 hover:bg-blue-600"><i class="bi bi-rewind"></i> 5s</button>
+          <button type="button" id="playPause" class="rounded-full bg-amber-500 text-blue-900 px-4 py-2 font-semibold hover:bg-amber-400 text-xl"><i class="bi bi-play-fill"></i></button>
+          <button type="button" id="fwd5" class="rounded-full bg-blue-700 px-3 py-2 hover:bg-blue-600">5s <i class="bi bi-fast-forward"></i></button>
         </div>
       </div>
 
       <div id="trimBox" class="hidden mt-3 rounded-lg bg-blue-900/60 p-3 text-left">
         <div class="flex items-center justify-between">
-          <div class="font-medium">✂ Trim Selection</div>
+          <div class="font-medium"><i class="bi bi-scissors"></i> Trim Selection</div>
           <div class="text-sm">Duration: <span id="trimLen" class="tabular-nums">00:00</span></div>
         </div>
 
@@ -101,10 +101,10 @@
     </div>
 
     {{-- STEP 2: PARAMETER KINETIKA --}}
-    <div id="step2" class="rounded-2xl bg-white shadow-md p-4 hidden">
+    <div id="step2" class="rounded-2xl bg-blue-950 shadow-md p-4 hidden">
       <div class="px-1">
-        <h3 class="font-semibold text-slate-800">Langkah 2: Parameter Kinetika</h3>
-        <p class="text-sm text-slate-500 -mt-0.5">Isi parameter yang diperlukan untuk Analisis Kinetika</p>
+        <h3 class="font-semibold text-white">Langkah 2: Parameter Kinetika</h3>
+        <p class="text-sm text-white -mt-0.5">Isi parameter yang diperlukan untuk Analisis Kinetika</p>
       </div>
 
       <form action="{{ route('analisis.store') }}" method="POST" enctype="multipart/form-data" id="submitForm" class="p-4">
@@ -123,27 +123,27 @@
         <div class="params space-y-3" data-analysis="kinetika">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <label class="block">
-              <div class="text-sm text-slate-600">Konsentrasi Awal (M) *</div>
+              <div class="text-sm text-slate-200">Konsentrasi Awal (M) *</div>
               <input name="konsentrasi_awal" required type="number" step="any" class="param-input mt-1 block w-full rounded border px-3 py-2" placeholder="Contoh: 0.1">
             </label>
             <label class="block">
-              <div class="text-sm text-slate-600">pH *</div>
+              <div class="text-sm text-slate-200">pH *</div>
               <input name="ph" required type="number" step="any" min="0" max="14" class="param-input mt-1 block w-full rounded border px-3 py-2" placeholder="Contoh: 7">
             </label>
             <label class="block">
-              <div class="text-sm text-slate-600">Volume Total (mL) *</div>
+              <div class="text-sm text-slate-200">Volume Total (mL) *</div>
               <input name="volume" required type="number" step="any" class="param-input mt-1 block w-full rounded border px-3 py-2" placeholder="Contoh: 10">
             </label>
             <label class="block">
-              <div class="text-sm text-slate-600">Pelarut *</div>
+              <div class="text-sm text-slate-200">Pelarut *</div>
               <input name="pelarut" required type="text" class="param-input mt-1 block w-full rounded border px-3 py-2" placeholder="Contoh: Air">
             </label>
             <label class="block">
-              <div class="text-sm text-slate-600">Laju Pengadukan (rpm) *</div>
+              <div class="text-sm text-slate-200">Laju Pengadukan (rpm) *</div>
               <input name="laju_pengadukan" required type="number" step="any" class="param-input mt-1 block w-full rounded border px-3 py-2" placeholder="Contoh: 150">
             </label>
             <label class="block">
-              <div class="text-sm text-slate-600">Nama Reaksi *</div>
+              <div class="text-sm text-slate-200">Nama Reaksi *</div>
               <input name="nama_reaksi" required type="text" class="param-input mt-1 block w-full rounded border px-3 py-2" placeholder="Contoh: Traffic Light">
             </label>
           </div>
@@ -353,7 +353,7 @@
   seekBar.addEventListener('input', ()=> video.currentTime = Number(seekBar.value));
   back5.addEventListener('click', ()=> video.currentTime = Math.max(0, video.currentTime - 5));
   fwd5.addEventListener('click', ()=> video.currentTime = Math.min(video.duration, video.currentTime + 5));
-  playPause.addEventListener('click', ()=> { if (video.paused) { video.play(); playPause.textContent = '⏸'; } else { video.pause(); playPause.textContent = '▶'; } });
+  playPause.addEventListener('click', ()=> { if (video.paused) { video.play(); playPause.innerHTML = '<i class="bi bi-pause"></i>'; } else { video.pause(); playPause.innerHTML = '<i class="bi bi-play-fill"></i>'; } });
 
   // trim handlers
   startRange.addEventListener('input', ()=> { if (Number(startRange.value) > Number(endRange.value)) endRange.value = startRange.value; updateTrim(); });
@@ -442,7 +442,7 @@
     // Tampilkan loading overlay & disable tombol
     document.getElementById('loadingOverlay').classList.remove('hidden');
     submitBtn.disabled = true;
-    submitBtn.textContent = "⏳ Sedang menganalisis...";
+    submitBtn.textContent = "Sedang menganalisis...";
   });
 
   // attach listeners to parameter inputs

@@ -2,16 +2,16 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     {{-- Header --}}
     <div class="text-center mb-6">
-      <h1 class="text-2xl md:text-3xl font-bold">Analisis Video Reaksi Kimia</h1>
+      <h1 class="text-2xl md:text-3xl font-bold text-white">Analisis Video Reaksi Kimia</h1>
       <p class="text-sm text-slate-500 mt-2">
         Upload video reaksi kimia Anda dan dapatkan analisis kuantitatif yang akurat dengan teknologi AI
       </p>
       <div class="mt-4 flex justify-center gap-3">
         <a href="#" class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700">
-          ⬇ Export
+          <i class="bi bi-download"></i> Export
         </a>
         <a href="#" class="inline-flex items-center gap-2 bg-white border px-4 py-2 rounded shadow hover:bg-slate-50">
-          🔗 Share Hasil
+          <i class="bi bi-share-fill"></i> Share Hasil
         </a>
       </div>
     </div>
@@ -19,30 +19,30 @@
     {{-- Main card --}}
     <div class="space-y-6">
       {{-- Graph container --}}
-      <div class="bg-white rounded-xl shadow p-5">
+      <div class="bg-slate-900 border border-slate-200/[.5] rounded-xl shadow p-5">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6 items-center">
           <div class="col-span-3">
-            <h3 class="font-semibold text-slate-800">Grafik Linearisation / Ringkasan</h3>
-            <p class="text-sm text-slate-500">Grafik hasil analisis dari sistem</p>
+            <h3 class="font-semibold text-white">Grafik Linearisation / Ringkasan</h3>
+            <p class="text-sm text-white">Grafik hasil analisis dari sistem</p>
           </div>
 
           {{-- Metrics --}}
           <div class="flex gap-3 justify-end">
-            <div class="bg-slate-50 p-3 rounded shadow w-40">
+            <div class="bg-slate-900 border border-slate-200/[.5] p-3 rounded shadow w-40">
               <div class="text-xs text-slate-500">Data Points</div>
               <div class="text-xl font-semibold text-blue-600">
                 {{ $analysis->data_point ? count($analysis->data_point) : '-' }}
               </div>
               <div class="text-xs text-slate-400">Titik Data Teranalisis</div>
             </div>
-            <div class="bg-slate-50 p-3 rounded shadow w-40">
+            <div class="bg-slate-900 border border-slate-200/[.5] p-3 rounded shadow w-40">
               <div class="text-xs text-slate-500">Akurasi</div>
               <div class="text-xl font-semibold text-emerald-600">
                 {{ isset($analysis->akurasi) ? number_format($analysis->akurasi, 2) . '%' : '-' }}
               </div>
               <div class="text-xs text-slate-400">Tingkat Akurasi Analisis</div>
             </div>
-            <div class="bg-slate-50 p-3 rounded shadow w-40">
+            <div class="bg-slate-900 border border-slate-200/[.5] p-3 rounded shadow w-40">
               <div class="text-xs text-slate-500">Durasi</div>
               <div class="text-xl font-semibold text-amber-600">
                 {{ isset($analysis->durasi) ? number_format($analysis->durasi, 2) . ' s' : '-' }}
@@ -67,8 +67,8 @@
       </div>
 
       {{-- Tabel ringkasan hasil kinetika --}}
-      <div class="bg-white rounded-xl shadow p-5">
-        <h3 class="font-semibold text-slate-800 mb-4">Tabel Ringkasan Hasil Kinetika</h3>
+      <div class="bg-slate-900 border border-slate-200/[.5] rounded-xl shadow p-5">
+        <h3 class="font-semibold text-white mb-4">Tabel Ringkasan Hasil Kinetika</h3>
         @php
           $waktu = $analysis->half_life ?? [];
           $reg = $analysis->regression_results ?? [];
@@ -178,8 +178,8 @@
       </div>
 
       {{-- Tabel hasil analisis gelembung --}}
-      <div class="bg-white rounded-xl shadow p-5">
-        <h3 class="font-semibold text-slate-800 mb-4">Tabel Hasil Analisis Gelembung</h3>
+      <div class="bg-slate-900 border border-slate-200/[.5] rounded-xl shadow p-5">
+        <h3 class="font-semibold text-white mb-4">Tabel Hasil Analisis Gelembung</h3>
         @php
           $buble = $analysis->hasil_analisis['buble_data'] ?? null;
           $totalBubbles = $buble['total_bubbles'] ?? null;
@@ -218,15 +218,15 @@
 
       {{-- Interpretasi & Rekomendasi --}}
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        <div class="bg-white rounded-xl shadow p-5">
-          <h4 class="font-semibold mb-2">Interpretasi Hasil Analisis</h4>
+        <div class="bg-slate-900 border border-slate-200/[.5] rounded-xl shadow p-5">
+          <h4 class="font-semibold mb-2 text-white">Interpretasi Hasil Analisis</h4>
           <div class="prose text-sm text-slate-700">
             {!! $analysis->interpretasi ?? '<p>Tidak ada interpretasi.</p>' !!}
           </div>
         </div>
 
-        <div class="bg-white rounded-xl shadow p-5">
-          <h4 class="font-semibold mb-2">Rekomendasi & Langkah Selanjutnya</h4>
+        <div class="bg-slate-900 border border-slate-200/[.5] rounded-xl shadow p-5">
+          <h4 class="font-semibold mb-2 text-white">Rekomendasi & Langkah Selanjutnya</h4>
           <div class="text-sm text-slate-700 space-y-2">
             @if(!empty($analysis->rekomendasi) && is_array($analysis->rekomendasi))
                 <ul class="list-disc list-inside">

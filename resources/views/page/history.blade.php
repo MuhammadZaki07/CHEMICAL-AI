@@ -8,17 +8,17 @@
             <div class="grid gap-4">
                 @foreach($analyses as $analysis)
                     <div x-data="analysisProgress({{ $analysis->id }}, '{{ $analysis->status }}')"
-                         class="p-4 border rounded-lg shadow-sm bg-white hover:shadow-md transition">
+                         class="p-4 border border-slate-200/[.5] rounded-lg shadow-sm bg-slate-900 hover:shadow-md transition">
 
                         <div class="flex justify-between items-center">
                             <div>
-                                <h3 class="text-lg font-semibold">
+                                <h3 class="text-lg font-semibold text-white">
                                     {{ 'Analisis : ' . $analysis->array_param['nama_reaksi'] ?? 'Analisis #' . $analysis->id }}
                                 </h3>
                                 <p class="text-sm text-gray-500">
                                     {{ $analysis->created_at->format('d M Y H:i') }}
                                 </p>
-                                <div class="mt-2 text-sm text-gray-700">
+                                <div class="mt-2 text-sm text-white">
                                     Hasil Analisis: <span class="font-medium">{{ $analysis->interpretasi ?? '-' }}</span> |
                                     Akurasi: <span class="font-medium">{{ $analysis->akurasi ?? '-' }}%</span> |
                                     Durasi: <span class="font-medium">{{ $analysis->durasi ?? '-' }} detik</span>
